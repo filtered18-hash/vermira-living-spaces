@@ -35,6 +35,9 @@ import agentImg from "@/assets/agent-portrait.jpg";
 import miraImg from "@/assets/unit-mira.jpg";
 import mireioImg from "@/assets/unit-mireio.jpg";
 import mirelaImg from "@/assets/unit-mirela.jpg";
+import floorplanMira from "@/assets/floorplan-mira.png";
+import floorplanMireioTypical from "@/assets/floorplan-mireio-typical.png";
+import floorplanMireioReverse from "@/assets/floorplan-mireio-reverse.png";
 
 const AGENT = {
   name: "Mary Ann Mendoza Caringal",
@@ -347,9 +350,9 @@ function Units() {
   );
 }
 
-function FloorPlanPlaceholder({ label, floor }: { label: string; floor: string }) {
+function FloorPlanPlaceholder({ label, note }: { label: string; note: string }) {
   return (
-    <div className="relative aspect-[4/3] rounded-2xl border border-[var(--forest-deep)]/20 bg-[var(--ivory)] overflow-hidden">
+    <div className="relative aspect-[16/9] rounded-2xl border border-[var(--forest-deep)]/20 bg-[var(--ivory)] overflow-hidden">
       <div
         className="absolute inset-0 opacity-50"
         style={{
@@ -362,8 +365,21 @@ function FloorPlanPlaceholder({ label, floor }: { label: string; floor: string }
       <div className="relative h-full flex flex-col items-center justify-center text-center p-8">
         <Home className="h-10 w-10 text-[var(--terracotta)]" />
         <p className="mt-4 font-display text-2xl text-[var(--forest-deep)]">{label}</p>
-        <p className="mt-1 text-sm text-muted-foreground">{floor} · Floor plan available on request</p>
+        <p className="mt-1 text-sm text-muted-foreground">{note}</p>
       </div>
+    </div>
+  );
+}
+
+function FloorPlanImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="rounded-2xl border border-[var(--forest-deep)]/15 bg-white overflow-hidden shadow-sm">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-auto object-contain"
+      />
     </div>
   );
 }
@@ -377,27 +393,43 @@ function FloorPlans() {
           <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)]">
             Layouts that live beautifully.
           </h2>
+          <p className="mt-4 text-sm text-muted-foreground">
+            Ground and second floor layouts per unit model. Furniture, car, and landscape are not included in the deliverable unit and are shown for illustration purposes only.
+          </p>
         </Reveal>
 
         <Reveal className="mt-12">
-          <Tabs defaultValue="ground" className="w-full">
-            <TabsList className="bg-card border border-border rounded-full p-1">
-              <TabsTrigger value="ground" className="rounded-full px-5 data-[state=active]:bg-[var(--forest-deep)] data-[state=active]:text-[var(--ivory)]">
-                Ground Floor
+          <Tabs defaultValue="mira" className="w-full">
+            <TabsList className="bg-card border border-border rounded-full p-1 h-auto flex-wrap">
+              <TabsTrigger value="mira" className="rounded-full px-5 data-[state=active]:bg-[var(--forest-deep)] data-[state=active]:text-[var(--ivory)]">
+                Mira · Single Detached
               </TabsTrigger>
-              <TabsTrigger value="second" className="rounded-full px-5 data-[state=active]:bg-[var(--forest-deep)] data-[state=active]:text-[var(--ivory)]">
-                Second Floor
+              <TabsTrigger value="mireio" className="rounded-full px-5 data-[state=active]:bg-[var(--forest-deep)] data-[state=active]:text-[var(--ivory)]">
+                Mireio · Single Attached
+              </TabsTrigger>
+              <TabsTrigger value="mirela" className="rounded-full px-5 data-[state=active]:bg-[var(--forest-deep)] data-[state=active]:text-[var(--ivory)]">
+                Mirela · Townhouse
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="ground" className="mt-8 grid md:grid-cols-3 gap-6">
-              <FloorPlanPlaceholder label="Mira Floor Plan" floor="Ground" />
-              <FloorPlanPlaceholder label="Mireio Floor Plan" floor="Ground" />
-              <FloorPlanPlaceholder label="Mirela Floor Plan" floor="Ground" />
+
+            <TabsContent value="mira" className="mt-8">
+              <h3 className="font-display text-2xl text-[var(--forest-deep)] mb-4">Mira — Typical Floor Layout</h3>
+              <FloorPlanImage src={floorplanMira} alt="Mira Single Detached typical floor layout — ground and second floor" />
             </TabsContent>
-            <TabsContent value="second" className="mt-8 grid md:grid-cols-3 gap-6">
-              <FloorPlanPlaceholder label="Mira Floor Plan" floor="Second" />
-              <FloorPlanPlaceholder label="Mireio Floor Plan" floor="Second" />
-              <FloorPlanPlaceholder label="Mirela Floor Plan" floor="Second" />
+
+            <TabsContent value="mireio" className="mt-8 space-y-10">
+              <div>
+                <h3 className="font-display text-2xl text-[var(--forest-deep)] mb-4">Mireio — Typical Floor Layout</h3>
+                <FloorPlanImage src={floorplanMireioTypical} alt="Mireio Single Attached typical floor layout — ground and second floor" />
+              </div>
+              <div>
+                <h3 className="font-display text-2xl text-[var(--forest-deep)] mb-4">Mireio — Reverse Floor Layout</h3>
+                <FloorPlanImage src={floorplanMireioReverse} alt="Mireio Single Attached reverse floor layout — ground and second floor" />
+              </div>
+            </TabsContent>
+
+            <TabsContent value="mirela" className="mt-8">
+              <FloorPlanPlaceholder label="Mirela Townhouse" note="Floor plan available on request — contact Mary Ann to receive it." />
             </TabsContent>
           </Tabs>
         </Reveal>
