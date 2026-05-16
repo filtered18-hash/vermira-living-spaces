@@ -1,26 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
+import VermiraLanding from "@/components/VermiraLanding";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Vermira Lipa — EDGE-Certified Homes with Mary Ann Caringal" },
+      {
+        name: "description",
+        content:
+          "Reserve your EDGE-certified, solar-ready home at Vermira Lipa in Batangas. Mira, Mireio, and Mirela units with up to ₱500,000 discount. Inquire with Mary Ann Mendoza Caringal, PRC 5081.",
+      },
+      { property: "og:title", content: "Vermira Lipa — EDGE-Certified Homes in Lipa City" },
+      {
+        property: "og:description",
+        content:
+          "EDGE-Certified. Solar-Ready. Built for the Future. Reserve for ₱25,000 — Mary Ann Caringal, Senior Property Specialist.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
+  component: VermiraLanding,
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
