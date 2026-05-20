@@ -28,6 +28,7 @@ import {
   Star,
   ArrowRight,
   Home,
+  MessageCircle,
 } from "lucide-react";
 
 import heroImg from "@/assets/hero-vermira.jpg";
@@ -504,6 +505,9 @@ function Agent() {
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild variant="hero" size="lg" className="rounded-full">
               <a href={`tel:${AGENT.phone.replace(/\s/g, "")}`}><Phone className="h-4 w-4" /> {AGENT.phone}</a>
+            </Button>
+            <Button asChild variant="gold" size="lg" className="rounded-full">
+              <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> Messenger</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
               <a href={`mailto:${AGENT.email}`}><Mail className="h-4 w-4" /> Email me</a>
