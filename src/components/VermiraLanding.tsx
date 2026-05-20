@@ -285,7 +285,7 @@ function UnitCard({ unit }: { unit: Unit }) {
           loading="lazy"
           className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
-        <span className="absolute top-4 left-4 rounded-full bg-[var(--terracotta)] text-white text-xs font-semibold px-3 py-1.5 shadow-lg">
+        <span className="absolute top-4 right-4 rounded-full bg-[var(--terracotta)] text-white text-xs font-semibold px-3 py-1.5 shadow-lg">
           SAVE {unit.discount}
         </span>
       </div>
