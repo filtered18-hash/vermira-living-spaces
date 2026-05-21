@@ -39,6 +39,11 @@ import mirelaImg from "@/assets/unit-mirela.jpg";
 import floorplanMira from "@/assets/floorplan-mira.png";
 import floorplanMireioTypical from "@/assets/floorplan-mireio-typical.png";
 import floorplanMireioReverse from "@/assets/floorplan-mireio-reverse.png";
+import amenityPlayground from "@/assets/amenity-playground.jpg";
+import amenityFitness from "@/assets/amenity-fitness.jpg";
+import amenityPool from "@/assets/amenity-pool.jpg";
+import amenityClubhouse from "@/assets/amenity-clubhouse.jpg";
+import amenityGate from "@/assets/amenity-gate.jpg";
 
 const AGENT = {
   name: "Mary Ann Mendoza Caringal",
