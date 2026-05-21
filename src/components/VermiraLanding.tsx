@@ -177,7 +177,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button asChild variant="hero" size="xl">
-              <a href="#inquire">
+              <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">
                 Reserve for ₱25,000 — Inquire Now <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
@@ -503,11 +503,11 @@ function Agent() {
             Mary Ann is committed to guiding you every step of the way — from inquiry to turnover.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
+            <Button asChild size="lg" className="rounded-full bg-[#0084FF] text-white hover:bg-[#0084FF]/90 shadow-lg shadow-[#0084FF]/40 ring-2 ring-[#0084FF]/30 hover:-translate-y-0.5 transition-all">
+              <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> Message on Messenger</a>
+            </Button>
             <Button asChild variant="hero" size="lg" className="rounded-full">
               <a href={`tel:${AGENT.phone.replace(/\s/g, "")}`}><Phone className="h-4 w-4" /> {AGENT.phone}</a>
-            </Button>
-            <Button asChild variant="gold" size="lg" className="rounded-full">
-              <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer"><MessageCircle className="h-4 w-4" /> Messenger</a>
             </Button>
             <Button asChild variant="outline" size="lg" className="rounded-full bg-transparent border-white/30 text-white hover:bg-white/10 hover:text-white">
               <a href={`mailto:${AGENT.email}`}><Mail className="h-4 w-4" /> Email me</a>
