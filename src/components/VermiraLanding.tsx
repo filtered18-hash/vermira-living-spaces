@@ -332,7 +332,7 @@ function UnitCard({ unit }: { unit: Unit }) {
         </dl>
 
         <Button asChild variant="forest" className="mt-7 w-full rounded-full" size="lg">
-          <a href="#inquire">Get Full Computation <ArrowRight className="h-4 w-4" /></a>
+          <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">Get Full Computation <ArrowRight className="h-4 w-4" /></a>
         </Button>
       </div>
     </Reveal>
