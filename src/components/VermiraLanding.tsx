@@ -770,8 +770,10 @@ export default function VermiraLanding() {
         <Units />
         <Amenities />
         <FloorPlans />
+        <LocationAdvantages />
         <WhyInvest />
         <Agent />
+        <FAQ />
         <Inquiry />
       </main>
       <Footer />
