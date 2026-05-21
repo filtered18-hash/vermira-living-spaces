@@ -251,25 +251,41 @@ function ProjectOverview() {
 
 function Amenities() {
   return (
-    <section className="py-20 bg-[var(--ivory)] border-y border-border">
+    <section className="py-24 bg-[var(--ivory)] border-y border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <Reveal>
+        <Reveal className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Amenities</p>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl text-[var(--forest-deep)]">
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)]">
             Life designed around you.
           </h2>
+          <p className="mt-4 text-muted-foreground">
+            Resort-style amenities woven through a master-planned green community.
+          </p>
         </Reveal>
-        <Reveal className="mt-10 flex gap-3 overflow-x-auto pb-4 sm:flex-wrap sm:overflow-visible">
-          {AMENITIES.map(({ icon: Icon, label }) => (
-            <div
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {AMENITIES.map(({ image, label }, i) => (
+            <Reveal
               key={label}
-              className="shrink-0 inline-flex items-center gap-2.5 rounded-full border border-[var(--forest-deep)]/15 bg-card px-5 py-2.5 text-sm text-[var(--forest-deep)] hover:bg-[var(--forest-deep)] hover:text-[var(--ivory)] transition-colors"
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-sm hover:shadow-2xl hover:shadow-[var(--forest-deep)]/10 hover:-translate-y-1 transition-all duration-500"
+              style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <Icon className="h-4 w-4 text-[var(--terracotta)] group-hover:text-[var(--gold)]" />
-              {label}
-            </div>
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <img
+                  src={image}
+                  alt={label}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--forest-deep)]/85 via-[var(--forest-deep)]/10 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--gold)]">Features & Amenities</p>
+                  <h3 className="mt-1 font-display text-2xl text-white">{label}</h3>
+                </div>
+              </div>
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
+        <p className="mt-8 text-xs text-muted-foreground text-center">Artist's perspective. Subject to change without prior notice.</p>
       </div>
     </section>
   );
