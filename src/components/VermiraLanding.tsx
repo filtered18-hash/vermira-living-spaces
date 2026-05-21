@@ -646,6 +646,88 @@ function Field({
   );
 }
 
+function LocationAdvantages() {
+  const points = [
+    { title: "1.5–2 hrs from Metro Manila", desc: "Easy access via STAR Tollway and SLEX — ideal for families looking for a house and lot near Manila without the city congestion." },
+    { title: "Heart of Lipa City, Batangas", desc: "Minutes from SM Lipa, Robinsons Lipa, DLSU Lipa, and top hospitals. Lipa is one of South Luzon's fastest-growing cities." },
+    { title: "Near Lima Tech & business hubs", desc: "Close to Lima Technology Center and emerging Batangas industrial parks — strong rental demand and property appreciation." },
+    { title: "Cooler climate, greener surroundings", desc: "Elevated terrain near Mt. Malarayat offers fresher air, scenic views, and a quieter lifestyle than typical Metro Manila suburbs." },
+  ];
+  return (
+    <section id="location" className="py-24 bg-[var(--ivory)] border-y border-border">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <Reveal className="max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Location Advantages</p>
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)] text-balance">
+            Why Lipa City is the smartest place to invest in Batangas real estate.
+          </h2>
+          <p className="mt-4 text-muted-foreground text-lg">
+            Vermira Lipa sits in one of South Luzon's most promising growth corridors — connecting you to Manila, Batangas industries, and weekend escapes in one address.
+          </p>
+        </Reveal>
+        <div className="mt-12 grid sm:grid-cols-2 gap-5">
+          {points.map((p, i) => (
+            <Reveal
+              key={p.title}
+              className="rounded-2xl border border-border bg-card p-6"
+              style={{ transitionDelay: `${i * 60}ms` }}
+            >
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--terracotta)]/10 text-[var(--terracotta)]">
+                <MapPin className="h-5 w-5" />
+              </div>
+              <h3 className="mt-4 font-display text-xl text-[var(--forest-deep)]">{p.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const FAQS = [
+  { q: "Where is Vermira Lipa located?", a: "Vermira Lipa is at Km 89 Lipa–Alaminos Road, Brgy. Talisay, Lipa City, Batangas — a prime, fast-growing area in South Luzon, near SM Lipa, DLSU Lipa, and Lima Tech Center." },
+  { q: "How much is the reservation fee?", a: "You can reserve your Vermira Lipa house and lot for only ₱25,000. Unit prices start at ₱4.68M for the Mirela Townhouse, with promo discounts of up to ₱500,000 for a limited time." },
+  { q: "What unit types are available?", a: "Three EDGE-certified models: Mira (Single Detached), Mireio (Single Attached), and Mirela (Townhouse). All units include a free 1.8kW solar panel system." },
+  { q: "Is Vermira Lipa accessible from Manila?", a: "Yes — about 1.5 to 2 hours from Metro Manila via STAR Tollway and SLEX. A strategic choice for buyers looking for an affordable house and lot near Manila in Batangas." },
+  { q: "What financing options are available?", a: "You can choose Bank financing (up to 25 years) or Pag-IBIG financing (up to 30 years), plus a flexible 36-month down payment scheme." },
+  { q: "When is the turnover?", a: "Projected turnover is 2028. Reserving early secures the best units and current promo pricing." },
+];
+
+function FAQ() {
+  return (
+    <section id="faq" className="py-24 sm:py-32">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6">
+        <Reveal className="max-w-2xl">
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">FAQ</p>
+          <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)] text-balance">
+            Frequently asked questions about Vermira Lipa.
+          </h2>
+        </Reveal>
+        <div className="mt-12 space-y-4">
+          {FAQS.map((item, i) => (
+            <Reveal
+              key={item.q}
+              className="rounded-2xl border border-border bg-card p-6"
+              style={{ transitionDelay: `${i * 40}ms` }}
+            >
+              <h3 className="font-display text-lg text-[var(--forest-deep)]">{item.q}</h3>
+              <p className="mt-2 text-muted-foreground leading-relaxed">{item.a}</p>
+            </Reveal>
+          ))}
+        </div>
+        <Reveal className="mt-10 text-center">
+          <Button asChild size="lg" className="rounded-full bg-[#0084FF] text-white hover:bg-[#0084FF]/90 shadow-lg shadow-[#0084FF]/30">
+            <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="h-4 w-4" /> Ask Mary Ann on Messenger
+            </a>
+          </Button>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-[var(--ivory)] border-t border-border">
