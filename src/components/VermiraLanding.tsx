@@ -177,7 +177,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button asChild variant="hero" size="xl">
-              <a href="#inquire">
+              <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">
                 Reserve for ₱25,000 — Inquire Now <ArrowRight className="h-4 w-4" />
               </a>
             </Button>
