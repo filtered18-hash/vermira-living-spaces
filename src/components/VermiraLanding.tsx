@@ -67,15 +67,11 @@ const NEARBY = [
 ];
 
 const AMENITIES = [
-  { icon: Trees, label: "17 Themed Pocket Parks" },
-  { icon: Building2, label: "Modern Clubhouse" },
-  { icon: Dumbbell, label: "Outdoor Gym" },
-  { icon: Waves, label: "Lap & Kiddie Pool" },
-  { icon: Users, label: "Playgrounds" },
-  { icon: Bike, label: "Jogging Paths" },
-  { icon: Leaf, label: "Reflexology Walk" },
-  { icon: Star, label: "Multi-Sport Courts" },
-  { icon: Home, label: "Future Commercial Center" },
+  { image: amenityClubhouse, label: "Modern Clubhouse" },
+  { image: amenityPool, label: "Swimming Pool" },
+  { image: amenityPlayground, label: "Playground" },
+  { image: amenityFitness, label: "Outdoor Fitness Area" },
+  { image: amenityGate, label: "Grand Gate & Guardhouse" },
 ];
 
 type Unit = {
