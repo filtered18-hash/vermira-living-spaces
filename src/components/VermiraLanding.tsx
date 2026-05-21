@@ -680,8 +680,8 @@ export default function VermiraLanding() {
       <main>
         <Hero />
         <ProjectOverview />
-        <Amenities />
         <Units />
+        <Amenities />
         <FloorPlans />
         <WhyInvest />
         <Agent />
