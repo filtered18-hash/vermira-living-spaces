@@ -142,7 +142,8 @@ function Header() {
         <nav className="hidden md:flex items-center gap-7 text-sm text-foreground/80">
           <a href="#project" className="hover:text-[var(--terracotta)] transition">Project</a>
           <a href="#units" className="hover:text-[var(--terracotta)] transition">Units</a>
-          <a href="#floorplans" className="hover:text-[var(--terracotta)] transition">Floor Plans</a>
+          <a href="#location" className="hover:text-[var(--terracotta)] transition">Location</a>
+          <a href="#faq" className="hover:text-[var(--terracotta)] transition">FAQ</a>
           <a href="#agent" className="hover:text-[var(--terracotta)] transition">Agent</a>
         </nav>
         <Button asChild variant="hero" size="sm" className="rounded-full px-5">
