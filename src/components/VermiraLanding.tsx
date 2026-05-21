@@ -173,10 +173,13 @@ function Hero() {
             Vermira Lipa · Keyland Properties
           </span>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-balance">
-            Your Dream Home in <span className="italic text-[var(--gold)]">Lipa City</span> Awaits
+            Affordable House and Lot in <span className="italic text-[var(--gold)]">Lipa City, Batangas</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg sm:text-xl text-white/85 text-pretty">
-            EDGE-Certified. Solar-Ready. Built for the Future.
+            EDGE-Certified, solar-ready homes near Manila — built for Filipino families who want comfort, savings, and long-term value. Reserve for ₱25,000 only.
+          </p>
+          <p className="mt-3 text-sm text-[var(--gold)]/90 font-medium">
+            ⏳ Promo ends May 31, 2026 — save up to ₱500,000 on select units.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button asChild variant="hero" size="xl">
