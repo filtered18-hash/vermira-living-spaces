@@ -73,6 +73,7 @@ const AMENITIES = [
   { image: amenityPlayground, label: "Playground" },
   { image: amenityFitness, label: "Outdoor Fitness Area" },
   { image: amenityGate, label: "Grand Gate & Guardhouse" },
+  { image: amenityJogging, label: "Jogging Path & Multi-Sport Court" },
 ];
 
 type Unit = {
