@@ -44,6 +44,7 @@ import amenityFitness from "@/assets/amenity-fitness.jpg";
 import amenityPool from "@/assets/amenity-pool.jpg";
 import amenityClubhouse from "@/assets/amenity-clubhouse.jpg";
 import amenityGate from "@/assets/amenity-gate.jpg";
+import amenityJogging from "@/assets/amenity-jogging.jpg";
 
 const AGENT = {
   name: "Mary Ann Mendoza Caringal",
