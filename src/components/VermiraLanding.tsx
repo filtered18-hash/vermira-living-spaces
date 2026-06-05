@@ -81,11 +81,13 @@ type Unit = {
   name: string;
   type: string;
   image: string;
-  discount: string;
+  sellingPrice: string;
   tcp: string;
   dp: string;
+  balance: string;
   bank: string;
   pagibig: string;
+  note: string;
 };
 
 const UNITS: Unit[] = [
@@ -94,33 +96,39 @@ const UNITS: Unit[] = [
     name: "MIRA",
     type: "Single Detached",
     image: miraImg,
-    discount: "₱500,000",
-    tcp: "₱8,139,121.84",
-    dp: "₱21,914.23 / mo × 36 mos",
-    bank: "₱51,773.06 / mo",
-    pagibig: "₱36,943.03 / mo",
+    sellingPrice: "₱7,519,124.18",
+    tcp: "₱8,872,566.53",
+    dp: "₱23,951.57 / mo × 36 mos",
+    balance: "₱7,985,309.88",
+    bank: "₱56,438.51 / mo",
+    pagibig: "₱36,943.02 / mo",
+    note: "Loan difference of ₱1,985,309.88 if approved loan is ₱6M.",
   },
   {
     key: "mireio",
     name: "MIREIO",
     type: "Single Attached",
     image: mireioImg,
-    discount: "₱350,000",
-    tcp: "₱6,564,098.61",
-    dp: "₱17,539.16 / mo × 36 mos",
-    bank: "₱41,754.32 / mo",
-    pagibig: "₱36,374.66 / mo",
+    sellingPrice: "₱5,912,795.43",
+    tcp: "₱6,977,098.61",
+    dp: "₱18,686.39 / mo × 36 mos",
+    balance: "₱6,279,388.75",
+    bank: "₱44,381.41 / mo",
+    pagibig: "₱36,943.75 / mo",
+    note: "Loan difference of ₱279,388.75 if approved loan is ₱6M.",
   },
   {
     key: "mirela",
     name: "MIRELA",
     type: "Townhouse",
     image: mirelaImg,
-    discount: "₱200,000",
-    tcp: "₱4,681,745.13",
-    dp: "₱12,310.40 / mo × 36 mos",
-    bank: "₱29,780.64 / mo",
-    pagibig: "₱25,943.68 / mo",
+    sellingPrice: "₱4,167,580.62",
+    tcp: "₱4,917,745.13",
+    dp: "₱12,965.96 / mo × 36 mos",
+    balance: "₱4,425,970.62",
+    bank: "₱31,281.84 / mo",
+    pagibig: "₱27,251.46 / mo",
+    note: "",
   },
 ];
 
