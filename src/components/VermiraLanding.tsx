@@ -81,11 +81,13 @@ type Unit = {
   name: string;
   type: string;
   image: string;
-  discount: string;
+  sellingPrice: string;
   tcp: string;
   dp: string;
+  balance: string;
   bank: string;
   pagibig: string;
+  note: string;
 };
 
 const UNITS: Unit[] = [
@@ -94,33 +96,39 @@ const UNITS: Unit[] = [
     name: "MIRA",
     type: "Single Detached",
     image: miraImg,
-    discount: "₱500,000",
-    tcp: "₱8,139,121.84",
-    dp: "₱21,914.23 / mo × 36 mos",
-    bank: "₱51,773.06 / mo",
-    pagibig: "₱36,943.03 / mo",
+    sellingPrice: "₱7,519,124.18",
+    tcp: "₱8,872,566.53",
+    dp: "₱23,951.57 / mo × 36 mos",
+    balance: "₱7,985,309.88",
+    bank: "₱56,438.51 / mo",
+    pagibig: "₱36,943.02 / mo",
+    note: "Loan difference of ₱1,985,309.88 if approved loan is ₱6M.",
   },
   {
     key: "mireio",
     name: "MIREIO",
     type: "Single Attached",
     image: mireioImg,
-    discount: "₱350,000",
-    tcp: "₱6,564,098.61",
-    dp: "₱17,539.16 / mo × 36 mos",
-    bank: "₱41,754.32 / mo",
-    pagibig: "₱36,374.66 / mo",
+    sellingPrice: "₱5,912,795.43",
+    tcp: "₱6,977,098.61",
+    dp: "₱18,686.39 / mo × 36 mos",
+    balance: "₱6,279,388.75",
+    bank: "₱44,381.41 / mo",
+    pagibig: "₱36,943.75 / mo",
+    note: "Loan difference of ₱279,388.75 if approved loan is ₱6M.",
   },
   {
     key: "mirela",
     name: "MIRELA",
     type: "Townhouse",
     image: mirelaImg,
-    discount: "₱200,000",
-    tcp: "₱4,681,745.13",
-    dp: "₱12,310.40 / mo × 36 mos",
-    bank: "₱29,780.64 / mo",
-    pagibig: "₱25,943.68 / mo",
+    sellingPrice: "₱4,167,580.62",
+    tcp: "₱4,917,745.13",
+    dp: "₱12,965.96 / mo × 36 mos",
+    balance: "₱4,425,970.62",
+    bank: "₱31,281.84 / mo",
+    pagibig: "₱27,251.46 / mo",
+    note: "",
   },
 ];
 
@@ -310,7 +318,7 @@ function UnitCard({ unit }: { unit: Unit }) {
           className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
         <span className="absolute top-4 right-4 rounded-full bg-[var(--terracotta)] text-white text-xs font-semibold px-3 py-1.5 shadow-lg">
-          SAVE {unit.discount}
+          {unit.type}
         </span>
       </div>
       <div className="flex flex-col flex-1 p-7">
@@ -318,14 +326,23 @@ function UnitCard({ unit }: { unit: Unit }) {
         <h3 className="mt-1 font-display text-3xl text-[var(--forest-deep)]">{unit.name}</h3>
 
         <div className="mt-5">
+          <p className="text-xs uppercase tracking-wider text-muted-foreground">Selling Price</p>
+          <p className="font-display text-2xl text-[var(--forest-deep)] mt-1">{unit.sellingPrice}</p>
+        </div>
+
+        <div className="mt-3">
           <p className="text-xs uppercase tracking-wider text-muted-foreground">Total Contract Price</p>
-          <p className="font-display text-3xl text-[var(--forest-deep)] mt-1">{unit.tcp}</p>
+          <p className="font-display text-3xl text-[var(--terracotta)] mt-1">{unit.tcp}</p>
         </div>
 
         <dl className="mt-6 space-y-3 text-sm border-t border-border pt-5">
           <div className="flex justify-between gap-4">
             <dt className="text-muted-foreground">10% Down Payment</dt>
             <dd className="text-foreground font-medium text-right">{unit.dp}</dd>
+          </div>
+          <div className="flex justify-between gap-4">
+            <dt className="text-muted-foreground">90% Balance</dt>
+            <dd className="text-foreground font-medium text-right">{unit.balance}</dd>
           </div>
           <div className="flex justify-between gap-4">
             <dt className="text-muted-foreground">Bank (25 yrs)</dt>
@@ -336,6 +353,10 @@ function UnitCard({ unit }: { unit: Unit }) {
             <dd className="text-foreground font-medium text-right">est. {unit.pagibig}</dd>
           </div>
         </dl>
+
+        {unit.note && (
+          <p className="mt-4 text-xs text-muted-foreground italic">{unit.note}</p>
+        )}
 
         <Button asChild variant="forest" className="mt-7 w-full rounded-full" size="lg">
           <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">Get Full Computation <ArrowRight className="h-4 w-4" /></a>
@@ -350,12 +371,12 @@ function Units() {
     <section id="units" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Units & Discounts</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Units & Pricing</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)] text-balance">
             Choose the home that fits your story.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Limited-time promo discounts available. Reserve on or before May 31, 2026.
+            Prices inclusive of 12% VAT and 6% Miscellaneous Charges. Financing available.
           </p>
         </Reveal>
 
