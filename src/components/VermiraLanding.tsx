@@ -371,12 +371,12 @@ function Units() {
     <section id="units" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Units & Discounts</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-[var(--terracotta)] font-medium">Units & Pricing</p>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl text-[var(--forest-deep)] text-balance">
             Choose the home that fits your story.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Limited-time promo discounts available. Reserve on or before May 31, 2026.
+            Prices inclusive of 12% VAT and 6% Miscellaneous Charges. Financing available.
           </p>
         </Reveal>
 
