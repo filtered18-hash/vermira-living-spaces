@@ -9,9 +9,11 @@ import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
 export default defineConfig({
-  // Force-enable the Cloudflare (nitro) deploy build for self-deploy outside Lovable.
-  // Uses the `cloudflare-module` preset and emits the Worker bundle + wrangler deploy config.
-  nitro: true,
+  // Build for Vercel: emit Vercel Build Output API (.vercel/output) so the SSR app
+  // runs natively on Vercel. This is what fixes the 404 on *.vercel.app — without a
+  // preset the build produced no Vercel-servable output. Switch back to `true`
+  // (cloudflare-module) only if self-deploying to Cloudflare Workers.
+  nitro: { preset: "vercel" },
   tanstackStart: {
     server: { entry: "server" },
   },
