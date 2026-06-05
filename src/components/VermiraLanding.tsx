@@ -318,7 +318,7 @@ function UnitCard({ unit }: { unit: Unit }) {
           className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
         />
         <span className="absolute top-4 right-4 rounded-full bg-[var(--terracotta)] text-white text-xs font-semibold px-3 py-1.5 shadow-lg">
-          SAVE {unit.discount}
+          {unit.type}
         </span>
       </div>
       <div className="flex flex-col flex-1 p-7">
@@ -326,14 +326,23 @@ function UnitCard({ unit }: { unit: Unit }) {
         <h3 className="mt-1 font-display text-3xl text-[var(--forest-deep)]">{unit.name}</h3>
 
         <div className="mt-5">
+          <p className="text-xs uppercase tracking-wider text-muted-foreground">Selling Price</p>
+          <p className="font-display text-2xl text-[var(--forest-deep)] mt-1">{unit.sellingPrice}</p>
+        </div>
+
+        <div className="mt-3">
           <p className="text-xs uppercase tracking-wider text-muted-foreground">Total Contract Price</p>
-          <p className="font-display text-3xl text-[var(--forest-deep)] mt-1">{unit.tcp}</p>
+          <p className="font-display text-3xl text-[var(--terracotta)] mt-1">{unit.tcp}</p>
         </div>
 
         <dl className="mt-6 space-y-3 text-sm border-t border-border pt-5">
           <div className="flex justify-between gap-4">
             <dt className="text-muted-foreground">10% Down Payment</dt>
             <dd className="text-foreground font-medium text-right">{unit.dp}</dd>
+          </div>
+          <div className="flex justify-between gap-4">
+            <dt className="text-muted-foreground">90% Balance</dt>
+            <dd className="text-foreground font-medium text-right">{unit.balance}</dd>
           </div>
           <div className="flex justify-between gap-4">
             <dt className="text-muted-foreground">Bank (25 yrs)</dt>
@@ -344,6 +353,10 @@ function UnitCard({ unit }: { unit: Unit }) {
             <dd className="text-foreground font-medium text-right">est. {unit.pagibig}</dd>
           </div>
         </dl>
+
+        {unit.note && (
+          <p className="mt-4 text-xs text-muted-foreground italic">{unit.note}</p>
+        )}
 
         <Button asChild variant="forest" className="mt-7 w-full rounded-full" size="lg">
           <a href="https://www.messenger.com/t/247326912848047" target="_blank" rel="noopener noreferrer">Get Full Computation <ArrowRight className="h-4 w-4" /></a>
