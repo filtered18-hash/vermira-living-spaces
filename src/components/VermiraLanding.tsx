@@ -182,7 +182,7 @@ function Hero() {
             Vermira Lipa · Keyland Properties
           </span>
           <h1 className="mt-6 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.02] text-balance">
-            Affordable House and Lot in <span className="italic text-[var(--gold)]">Lipa City, Batangas</span>
+            Premium House and Lot in <span className="italic text-[var(--gold)]">Lipa City, Batangas</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg sm:text-xl text-white/85 text-pretty">
             EDGE-Certified, solar-ready homes near Manila — built for Filipino families who want comfort, savings, and long-term value. Reserve for ₱25,000 only.
