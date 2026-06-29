@@ -72,7 +72,7 @@ const AMENITIES = [
   { image: amenityPool, label: "Swimming Pool" },
   { image: amenityPlayground, label: "Playground" },
   { image: amenityFitness, label: "Outdoor Fitness Area" },
-  { image: amenityPocketParks, label: "Six Themed Pocket Parks" },
+  { image: amenityPocketParks, label: "17 Themed Pocket Parks" },
   { image: amenityJogging, label: "Jogging Path & Multi-Sport Court" },
 ];
 
