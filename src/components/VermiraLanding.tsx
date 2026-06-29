@@ -43,7 +43,7 @@ import amenityPlayground from "@/assets/amenity-playground.jpg";
 import amenityFitness from "@/assets/amenity-fitness.jpg";
 import amenityPool from "@/assets/amenity-pool.jpg";
 import amenityClubhouse from "@/assets/amenity-clubhouse.jpg";
-import amenityGate from "@/assets/amenity-gate.jpg";
+import amenityPocketParks from "@/assets/amenity-pocket-parks.jpg";
 import amenityJogging from "@/assets/amenity-jogging.jpg";
 
 const AGENT = {
@@ -72,7 +72,7 @@ const AMENITIES = [
   { image: amenityPool, label: "Swimming Pool" },
   { image: amenityPlayground, label: "Playground" },
   { image: amenityFitness, label: "Outdoor Fitness Area" },
-  { image: amenityGate, label: "Grand Gate & Guardhouse" },
+  { image: amenityPocketParks, label: "Six Themed Pocket Parks" },
   { image: amenityJogging, label: "Jogging Path & Multi-Sport Court" },
 ];
 
@@ -186,9 +186,6 @@ function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-lg sm:text-xl text-white/85 text-pretty">
             EDGE-Certified, solar-ready homes near Manila — built for Filipino families who want comfort, savings, and long-term value. Reserve for ₱25,000 only.
-          </p>
-          <p className="mt-3 text-sm text-[var(--gold)]/90 font-medium">
-            ⏳ Promo ends May 31, 2026 — save up to ₱500,000 on select units.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button asChild variant="hero" size="xl">
@@ -709,7 +706,7 @@ function LocationAdvantages() {
 
 const FAQS = [
   { q: "Where is Vermira Lipa located?", a: "Vermira Lipa is at Km 89 Lipa–Alaminos Road, Brgy. Talisay, Lipa City, Batangas — a prime, fast-growing area in South Luzon, near SM Lipa, DLSU Lipa, and Lima Tech Center." },
-  { q: "How much is the reservation fee?", a: "You can reserve your Vermira Lipa house and lot for only ₱25,000. Unit prices start at ₱4.68M for the Mirela Townhouse, with promo discounts of up to ₱500,000 for a limited time." },
+  { q: "How much is the reservation fee?", a: "You can reserve your Vermira Lipa house and lot for only ₱25,000. Unit prices start at ₱4.68M for the Mirela Townhouse." },
   { q: "What unit types are available?", a: "Three EDGE-certified models: Mira (Single Detached), Mireio (Single Attached), and Mirela (Townhouse). All units include a free 1.8kW solar panel system." },
   { q: "Is Vermira Lipa accessible from Manila?", a: "Yes — about 1.5 to 2 hours from Metro Manila via STAR Tollway and SLEX. A strategic choice for buyers looking for an affordable house and lot near Manila in Batangas." },
   { q: "What financing options are available?", a: "You can choose Bank financing (up to 25 years) or Pag-IBIG financing (up to 30 years), plus a flexible 36-month down payment scheme." },

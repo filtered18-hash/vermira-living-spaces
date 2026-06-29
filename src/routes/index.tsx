@@ -69,7 +69,7 @@ const FAQ_SCHEMA = {
       name: "How much is the reservation fee for a house and lot in Vermira Lipa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reserve your Vermira Lipa unit for only ₱25,000. Unit prices start at ₱4.68M for the Mirela Townhouse, with promo discounts of up to ₱500,000 available for a limited time.",
+        text: "You can reserve your Vermira Lipa unit for only ₱25,000. Unit prices start at ₱4.68M for the Mirela Townhouse.",
       },
     },
     {
