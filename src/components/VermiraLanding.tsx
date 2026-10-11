@@ -102,7 +102,7 @@ const UNITS: Unit[] = [
     balance: "₱8,327,582.35",
     bank: "₱58,859.35 / mo",
     pagibig: "₱51,274.34 / mo",
-    note: "Loan difference of ₱2,327,582.35 if approved loan is ₱6M.",
+    note: "",
   },
   {
     key: "mireio",
@@ -115,7 +115,7 @@ const UNITS: Unit[] = [
     balance: "₱6,656,152.08",
     bank: "₱47,045.68 / mo",
     pagibig: "₱40,983.06 / mo",
-    note: "Loan difference of ₱656,152.08 if approved loan is ₱6M.",
+    note: "",
   },
   {
     key: "mirela",
